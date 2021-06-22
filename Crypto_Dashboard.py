@@ -12,7 +12,7 @@ st.write("""
 Visually show data on crypto (BTC, ETH & DOGE) from **'2019-06-18' to '2021-06-17'**
 """)
 
-image = Image.open("/Users/michaelmontgomery/Documents/Programming/Projects/Crypto Dashboard/image2.jpg")
+image = Image.open("/Crypto_Dashboard_v1/image2.jpg")
 st.image(image, use_column_width=True)
 
 st.sidebar.header("User Input")
@@ -37,11 +37,11 @@ def get_crypto_name(symbol):
 def get_data(symbol,start,end):
     symbol = symbol.upper()
     if symbol == "BTC":
-        df = pd.read_csv("/Users/michaelmontgomery/Documents/Programming/Projects/Crypto Dashboard/Cryptocurrencies/BTC.csv")
+        df = pd.read_csv("/Crypto_Dashboard_v1/Cryptocurrencies/BTC.csv")
     elif symbol == "ETH":
-        df = pd.read_csv("/Users/michaelmontgomery/Documents/Programming/Projects/Crypto Dashboard/Cryptocurrencies/ETH.csv")
+        df = pd.read_csv("/Crypto_Dashboard_v1/Cryptocurrencies/ETH.csv")
     elif symbol == "DOGE":
-        df = pd.read_csv("/Users/michaelmontgomery/Documents/Programming/Projects/Crypto Dashboard/Cryptocurrencies/DOGE.csv")
+        df = pd.read_csv("/Crypto_Dashboard_v1/Cryptocurrencies/DOGE.csv")
     else:
         df = pd.DataFrame(columns=['Date', 'Close','Open','Volume','Adj Close'])
 
